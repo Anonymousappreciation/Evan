@@ -1,0 +1,614 @@
+/* ================================
+   GENERAL
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4b5cc,
+            #9ad5df,
+            #c2bddD
+        );
+
+    color: #444;
+
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   LOCK SCREEN
+================================ */
+
+.lock-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4b5cc,
+            #c2bddD
+        );
+
+    z-index: 1000;
+}
+
+
+.lock-box {
+
+    width: 90%;
+
+    max-width: 400px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.2);
+
+    animation: popIn 0.8s ease;
+}
+
+
+.lock-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+}
+
+
+.lock-box h1 {
+
+    color: #8c6fae;
+
+    margin-bottom: 10px;
+}
+
+
+.lock-box p {
+
+    margin-bottom: 20px;
+
+    color: #777;
+}
+
+
+.lock-box input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #c2bddD;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+}
+
+
+.lock-box button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #8c6fae;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.lock-box button:hover {
+
+    transform: scale(1.05);
+
+    background: #735795;
+}
+
+
+#errorMessage {
+
+    color: #e74c3c;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   HIDDEN
+================================ */
+
+.hidden {
+
+    display: none;
+}
+
+
+/* ================================
+   MAIN HEADER
+================================ */
+
+header {
+
+    text-align: center;
+
+    padding: 50px 20px 30px;
+}
+
+
+header h1 {
+
+    color: white;
+
+    font-size: 42px;
+
+    text-shadow:
+        2px 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.subtitle {
+
+    margin-top: 10px;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+
+/* ================================
+   MUSIC BUTTON
+================================ */
+
+.music-button {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    z-index: 50;
+}
+
+
+.music-button button {
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #76598e;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+
+.music-button button:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   EMPLOYEE CARD
+================================ */
+
+.employee-card {
+
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: 20px auto;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.95);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.15);
+
+    animation: fadeUp 1s ease;
+}
+
+
+.trophy {
+
+    font-size: 70px;
+
+    animation: bounce 2s infinite;
+}
+
+
+.employee-card h2 {
+
+    color: #8c6fae;
+
+    margin-top: 15px;
+}
+
+
+.employee-name {
+
+    margin-top: 10px;
+
+    font-size: 36px;
+
+    color: #d47fa5;
+}
+
+
+.award {
+
+    margin-top: 10px;
+
+    font-weight: bold;
+
+    color: #777;
+}
+
+
+.message {
+
+    max-width: 550px;
+
+    margin: 25px auto;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* ================================
+   QUALITIES
+================================ */
+
+.qualities {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.qualities span {
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    background: #f4b5cc;
+
+    color: #654c70;
+
+    font-weight: bold;
+}
+
+
+/* ================================
+   THANK YOU
+================================ */
+
+.thank-you {
+
+    width: 90%;
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.8);
+
+    border-radius: 25px;
+}
+
+
+.thank-you h2 {
+
+    color: #8c6fae;
+
+    margin-bottom: 15px;
+}
+
+
+.thank-you p {
+
+    line-height: 1.6;
+}
+
+
+.heart {
+
+    font-size: 50px;
+
+    margin-top: 20px;
+
+    animation: heartbeat 1.3s infinite;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: white;
+}
+
+
+/* ================================
+   FLOATING OBJECTS
+================================ */
+
+.floating {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 30px;
+
+    animation: floatUp 8s linear infinite;
+
+    pointer-events: none;
+
+    opacity: 0.8;
+
+    z-index: 1;
+}
+
+
+.floating:nth-child(1) {
+
+    left: 10%;
+
+    animation-delay: 0s;
+}
+
+
+.floating:nth-child(2) {
+
+    left: 25%;
+
+    animation-delay: 2s;
+}
+
+
+.floating:nth-child(3) {
+
+    left: 45%;
+
+    animation-delay: 4s;
+}
+
+
+.floating:nth-child(4) {
+
+    left: 65%;
+
+    animation-delay: 1s;
+}
+
+
+.floating:nth-child(5) {
+
+    left: 80%;
+
+    animation-delay: 3s;
+}
+
+
+.floating:nth-child(6) {
+
+    left: 90%;
+
+    animation-delay: 5s;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes floatUp {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+    }
+}
+
+
+@keyframes popIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.7);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+}
+
+
+@keyframes bounce {
+
+    0%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0%, 100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.2);
+
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    header h1 {
+
+        font-size: 30px;
+
+    }
+
+    .employee-name {
+
+        font-size: 28px;
+
+    }
+
+    .employee-card {
+
+        padding: 35px 20px;
+
+    }
+
+    .music-button {
+
+        top: 10px;
+
+        right: 10px;
+
+    }
+
+}

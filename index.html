@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Appreciation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FLOATING DECORATIONS -->
+    <div class="floating">💗</div>
+    <div class="floating">✨</div>
+    <div class="floating">💙</div>
+    <div class="floating">🌸</div>
+    <div class="floating">⭐</div>
+    <div class="floating">💜</div>
+
+
+    <!-- SECRET LOCK SCREEN -->
+    <div id="lockScreen" class="lock-screen">
+
+        <div class="lock-box">
+
+            <div class="lock-icon">🔒</div>
+
+            <h1>Special Surprise</h1>
+
+            <p>Enter the secret password to continue.</p>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+            >
+
+            <button onclick="unlockPage()">
+                Unlock 💖
+            </button>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN WEBSITE -->
+    <main id="mainContent" class="hidden">
+
+        <header>
+
+            <div class="music-button">
+
+                <button onclick="toggleMusic()" id="musicButton">
+                    🎵 Play Music
+                </button>
+
+            </div>
+
+            <h1>🌟 Employee Appreciation 🌟</h1>
+
+            <p class="subtitle">
+                Celebrating dedication, teamwork, and excellence.
+            </p>
+
+        </header>
+
+
+        <!-- EMPLOYEE CARD -->
+        <section class="employee-card">
+
+            <div class="trophy">
+                🏆
+            </div>
+
+            <h2>Dedicated Employee</h2>
+
+            <h1 class="employee-name">
+                Evan John Tarrosa
+            </h1>
+
+            <p class="award">
+                ✨ Appreciation for being Dedicated Employee ✨
+            </p>
+
+            <p class="message">
+
+                In recognition of your outstanding dedication,
+                reliability, and commitment to excellence.
+
+                Your positive attitude, teamwork, initiative,
+                and willingness to go above and beyond make
+                you a valuable part of our team.
+
+            </p>
+
+            <div class="qualities">
+
+                <span>⭐ Dedication</span>
+                <span>💗 Teamwork</span>
+                <span>✨ Excellence</span>
+                <span>💙 Reliability</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- THANK YOU -->
+        <section class="thank-you">
+
+            <h2>Thank You! 💐</h2>
+
+            <p>
+                Your hard work and contribution do not go unnoticed.
+                Thank you for making a difference every day!
+            </p>
+
+            <div class="heart">
+                💖
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                Made with ❤️ to celebrate amazing employees.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- MUSIC -->
+    <audio id="backgroundMusic" loop>
+
+        <source src="music.mp3" type="audio/mpeg">
+
+        Your browser does not support audio.
+
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
